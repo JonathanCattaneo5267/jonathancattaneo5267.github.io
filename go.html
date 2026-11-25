@@ -1,0 +1,8 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Redirecting…</title></head>
+<body><p>Opening release page…</p><script>
+const q=new URLSearchParams(location.search);
+let r=(q.get('r')||'').replace(/[^a-zA-Z0-9_.\/-]/g,'');
+try{fetch('https://abacus.jasoncameron.dev/hit/hubdl/'+encodeURIComponent(r.replace(/[^a-zA-Z0-9]/g,''))).catch(()=>{});}catch(e){}
+const t=r?'https://github.com/'+r+'/releases':'/';
+setTimeout(function(){location.replace(t)},200);
+</script></body></html>
